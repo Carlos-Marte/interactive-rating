@@ -44,6 +44,10 @@
     align-items: center;
   }
 
+  &-itemRatingList {
+    list-style-type: none;
+  }
+
   &-ratingButton {
     width: 40px;
     height: 40px;

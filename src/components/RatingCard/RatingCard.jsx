@@ -20,7 +20,9 @@ export const RatingCard = () => {
   }
 
   const radioRatingNumbers = ratingNumbers.map(number => (
-    <input type='button' id={`radio${number}`} value={number} key={number} onClick={handleClick} className='RatingCard-ratingButton' />
+    <li key={number} className='RatingCard-itemRatingList'>
+      <input type='button' id={`radio${number}`} value={number} onClick={handleClick} className='RatingCard-ratingButton' />
+    </li>
   ))
 
   const ratingClassName = submit ? 'RatingCard RatingCard--displayNone' : 'RatingCard'
