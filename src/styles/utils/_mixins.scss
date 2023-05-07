@@ -1,0 +1,14 @@
+@mixin flex-col ($gap: 1em) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin card-base () {
+  max-width: 350px;
+  min-width: 320px;
+  min-height: 350px;
+  background: $neutral-dark-blue;
+  padding: 1.5em 1.5em 2em;
+  border-radius: 12px;
+}

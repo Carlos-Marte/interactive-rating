@@ -1,0 +1,34 @@
+.ThanksCard {
+  @include card-base;
+  @include flex-col(2em);
+  // justify-content: center;
+  text-align: center;
+
+  // Icon and select rating
+  &-iconContainer {
+    @include flex-col(1.5em);
+    align-items: center;
+  }
+
+  &-icon {
+    max-width: fit-content;
+    height: auto;
+  }
+
+  &-selectRating {
+    background: $neutral-medium-grey;
+    color: $primary-orange;
+    padding: 0.5em 1em;
+    border-radius: 12px;
+  }
+
+  // Content
+  &-content {
+    @include flex-col;
+  }
+
+  &-paragraph {
+    color: $neutral-light-grey;
+    line-height: 1.5;
+  }
+}

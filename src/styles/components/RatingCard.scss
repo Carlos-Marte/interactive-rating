@@ -1,0 +1,93 @@
+.RatingCard {
+  @include card-base;
+  @include flex-col;
+
+  // Icon
+  &-iconContainer {
+    width: fit-content;
+    padding: 0.7em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $neutral-medium-grey;
+  }
+
+  &-icon {
+    max-width: fit-content;
+    height: auto;
+  }
+
+  //Content
+  &-content {
+    @include flex-col;
+    gap: 2em;
+  }
+
+  &-texts {
+    @include flex-col;
+  }
+
+  &-paragraph {
+    color: $neutral-light-grey;
+    line-height: 1.5;
+  }
+
+  &-formRating {
+    @include flex-col;
+    gap: 1.5em;
+  }
+
+  &-numbersRatingList {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &-ratingButton {
+    width: 40px;
+    height: 40px;
+    padding: 1em;
+    background: $neutral-medium-grey;
+    color: $neutral-light-grey;
+    outline: none;
+    border: none;
+    clip-path: circle(50% at 50% 50%);
+    cursor: pointer;
+    transition: background ease-in-out 0.3s;
+
+    &:hover {
+      background: $primary-orange;
+      color: $neutral-white;
+    }
+
+    &:focus {
+      background: $neutral-light-grey;
+      color: $neutral-white;
+    }
+  }
+
+  &-button {
+    background: $primary-orange;
+    padding: 1em 1.5em;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    color: inherit;
+    font: inherit;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background ease-in-out 0.2s;
+
+    &:hover {
+      background: $neutral-white;
+      color: $primary-orange;
+    }
+  }
+
+  &--displayNone {
+    display: none;
+  }
+}
